@@ -9,8 +9,11 @@ else
 echo "Running with root user!!"
 fi
 
+dpkg -s mysql-server
+if [ $? -ne 0 ]
+then
+echo "Going to install mysql"
 apt install mysql-server -y
-VALIDATE(){
 if [ $? -eq 0 ]
 then
 echo "Installing mysql is success"
@@ -18,12 +21,11 @@ else
 echo "Installing mysql is failure"
 exit 1
 fi
-}
-VALIDATE
-if [ $1 -ne 0 ]
-then 
-echo "Installing $2.."
+
 else
-echo "$2 is already installed"
-fi
+echo "Already installed mysql"
+
+
+
+
 
