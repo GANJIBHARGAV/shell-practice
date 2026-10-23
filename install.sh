@@ -10,7 +10,7 @@ echo "Running with root user!!"
 fi
 
 apt install mysqlbdchka
-if [ $? -eq 0]
+if [ $? -eq 0 ]
 then
 echo "Installing mysql is success"
 else
