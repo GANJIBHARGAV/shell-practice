@@ -1,6 +1,7 @@
 #!/bin/bash
 PERSON=$1
 echo "Hello $PERSON, good day!"
+echo "All variables passed are $@"
 echo "Current working directory: $PWD"
 echo "Current user is: $USER"
 echo "Script name is: $0"
