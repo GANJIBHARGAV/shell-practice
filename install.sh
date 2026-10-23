@@ -9,7 +9,7 @@ else
 echo "Running with root user!!"
 fi
 
-apt install mysql -y
+apt install mysql-server -y
 if [ $? -eq 0 ]
 then
 echo "Installing mysql is success"
