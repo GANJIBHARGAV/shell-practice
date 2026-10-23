@@ -4,6 +4,7 @@ var2=$2
 
 USAGE(){
     echo "USAGE:: sh greetings.sh <var1><var2>"
+    exit 1
 }
 
 if [ $# -lt 2]
