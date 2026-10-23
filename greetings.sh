@@ -14,3 +14,7 @@ fi
 
 echo "Hello $var1, how are you??"
 echo "Hello $var2, hey!! I am doing great how about you?"
+
+echo "Along with this print the filesystem details and memoery usage"
+df -h
+free -m
