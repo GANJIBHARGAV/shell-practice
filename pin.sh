@@ -7,5 +7,5 @@ echo "Your number is $pin"
 date=$(date)
 echo "Script executed at $date"
 
-MOVIES=( "Eshwar", "Fauzi", "Spirit", "Billa")
+MOVIES=( "Eshwar", "Fauzi", "Spirit", "Billa", "saaho")
 echo "${MOVIES[2]}"
