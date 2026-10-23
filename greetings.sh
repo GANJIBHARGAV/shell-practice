@@ -9,9 +9,7 @@ USAGE(){
 
 if [ $# -lt 2 ]
 then
-{
     USAGE
-}
 fi
 
 echo "Hello $var1, how are you??"
