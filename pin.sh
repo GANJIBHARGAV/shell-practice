@@ -8,4 +8,4 @@ date=$(date)
 echo "Script executed at $date"
 
 MOVIES=( "Eshwar", "Fauzi", "Spirit", "Billa" )
-echo "${MOVIES[2]}"
+echo "${MOVIES[3]}"
