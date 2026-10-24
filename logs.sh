@@ -31,7 +31,7 @@ then
 echo "Going to install mysql" &>>$LOG_FILE
 dnf install mysql -y &>>$LOG_FILE
 
-VALIDATE
+VALIDATE $? mysql
 
 else
 echo "Already installed mysql" &>>$LOG_FILE
@@ -43,7 +43,7 @@ then
 echo "Going to install nginx" &>>$LOG_FILE
 dnf install nginx -y &>>$LOG_FILE
 
-VALIDATE
+VALIDATE $? nginx
 
 else
 echo "Already installed nginx" &>>$LOG_FILE
