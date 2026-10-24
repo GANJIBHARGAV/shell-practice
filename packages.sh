@@ -24,7 +24,7 @@ VALIDATE(){
     fi
 }
 
-PACKAGES=["mysql", "nginx" , "python3", "httpd"]
+PACKAGES=("mysql" "nginx" "python3" "httpd")
 for package in ${PACKAGES[@]}
 do
 dnf list installed $package  &>>$LOG_FILE
