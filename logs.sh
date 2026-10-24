@@ -18,7 +18,7 @@ mkdir -p $LOGS_FOLDER
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-    echo "Installing $2 is success" &>> | tee -a $LOG_FILE
+    echo "Installing $2 is success"  | tee -a $LOG_FILE
     else
     echo "Installing $2 is failure" | tee -a $LOG_FILE
     exit 1
