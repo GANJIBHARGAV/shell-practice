@@ -6,7 +6,7 @@ LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 SOURCE_DIR="/home/ec2-user/app-logs"
 mkdir -p $LOGS_FOLDER
 
-echo "script started execution at $date"
+echo "script started execution at $(date)"
 
 if [ $USER_ID -ne 0 ]
 then 
@@ -23,4 +23,4 @@ echo "Deleting files: $line " | tee -a $LOG_FILE
 rm -rf $line
 done <<< $FILES_TO_DELETE
 
-echo "script execution ended at $date"
+echo "script execution ended at $(date)"
