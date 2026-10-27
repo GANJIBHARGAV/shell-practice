@@ -50,9 +50,7 @@ else
 
         rm -f "$line"
             echo "Successfully deleted: $line" | tee -a "$LOG_FILE"
-        fi
     done <<< "$FILES_TO_DELETE"
-fi
 
 # Record script completion
 echo "Script execution completed at $(date)" | tee -a "$LOG_FILE"
