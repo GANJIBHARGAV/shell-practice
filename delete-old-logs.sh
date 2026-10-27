@@ -11,6 +11,7 @@ then
 echo "Please login with root user" | tee -a $LOG_FILE
 else
 echo "You are under root user" | tee -a $LOG_FILE
+fi
 
 FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 
