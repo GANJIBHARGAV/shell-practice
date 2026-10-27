@@ -51,6 +51,7 @@ else
             echo "Successfully deleted: $line" | tee -a "$LOG_FILE"
         else
             echo "Failed to delete: $line" | tee -a "$LOG_FILE"
+            exit 1
         fi
     done <<< "$FILES_TO_DELETE"
 fi
