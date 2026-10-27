@@ -8,21 +8,21 @@ SOURCE_DIR="/home/ec2-user/app-logs"
 
 if [ $USER_ID -ne 0 ]
 then
-echo "Please login with root user"
+echo "Please login with root user" | tee -a $LOG_FILE
 exit 1
 else
-echo "You are under root user!"
+echo "You are under root user!" | tee -a $LOG_FILE
 fi
 
 mkdir -p "$LOGS_FOLDER"
 FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 if [ -z "$FILES_TO_DELETE" ]
 then
-echo "No files present or already files got deleted"
+echo "No files present or already files got deleted" | tee -a $LOG_FILE
 else
 while IFS= read -r line
 do 
-echo "Deleting files: $line"
+echo "Deleting files: $line" | tee -a $LOG_FILE
 rm -rf $line
 done <<< "$FILES_TO_DELETE"
 fi
