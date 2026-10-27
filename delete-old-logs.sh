@@ -17,9 +17,9 @@ fi
 
 
 
-FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
+FILES_TO_DELETE=$(find "$SOURCE_DIR" -name "*.log" -mtime +14)
 
-if [ -z $FILES_TO_DELETE ]
+if [ -z "$FILES_TO_DELETE" ]
 then
 echo "No files to delete or already files got deleted" | tee -a $LOG_FILE
 else
