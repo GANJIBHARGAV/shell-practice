@@ -5,7 +5,6 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 SOURCE_DIR="/home/ec2-user/app-logs"
 
-mkdir -p "$LOGS_FOLDER"
 
 if [ $USER_ID -ne 0 ]
 then
@@ -15,6 +14,7 @@ else
 echo "You are under root user!"
 fi
 
+mkdir -p "$LOGS_FOLDER"
 FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 if [ -z "$FILES_TO_DELETE" ]
 then
