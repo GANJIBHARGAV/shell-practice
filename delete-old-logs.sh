@@ -5,13 +5,13 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 APP_LOGS="app-logs"
 mkdir -p "$APP_LOGS"
+cd "$APP_LOGS"
 touch -d 20240809 payment.log
 touch -d 20201212 user.log
 touch -d 20201010 shipping.log
 touch -d 20200906 cart.log
 touch -d 20200102 catalogue.log
 touch  report.log
-
 SOURCE_DIR="/home/ec2-user/$APP_LOGS"
 
 
