@@ -24,3 +24,4 @@ do
 echo "Deleting files: $line"
 rm -rf $line
 done <<< "$FILES_TO_DELETE"
+fi
