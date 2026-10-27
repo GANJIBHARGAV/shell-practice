@@ -15,12 +15,19 @@ else
 echo "You are under root user" | tee -a $LOG_FILE
 fi
 
+
+
 FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 
+if [ -z $FILES_TO_DELETE ]
+then
+echo "No files to delete or already files got deleted" | tee -a $LOG_FILE
+else
 while IFS= read -r line
 do
-echo "Deleting files: $line " | tee -a $LOG_FILE
+echo "Deleting files: $line" | tee -a $LOG_FILE
 rm -rf $line
 done <<< $FILES_TO_DELETE
+fi
 
 echo "script execution ended at $(date)"
