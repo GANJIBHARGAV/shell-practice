@@ -4,7 +4,10 @@ LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 SOURCE_DIR="/home/ec2-user/app-logs"
-
+touch -d 20260101 payment.log
+touch -d 20210202 pathbio.log
+touch -d 20200101 inotiv.log
+touch 20190809 reports.log
 
 if [ $USER_ID -ne 0 ]
 then
