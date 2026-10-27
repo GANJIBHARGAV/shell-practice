@@ -13,6 +13,7 @@ echo "Please login with root user"
 exit 1
 else
 echo "You are under root user!"
+fi
 
 FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 if [ -z "$FILES_TO_DELETE" ]
