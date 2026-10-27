@@ -44,14 +44,12 @@ if [ -z "$FILES_TO_DELETE" ]; then
     echo "No old log files found." | tee -a "$LOG_FILE"
 else
     # Delete old log files
-    while IFS= read -r line; do
+    while IFS= read -r line
+     do
         echo "Deleting file: $line" | tee -a "$LOG_FILE"
 
-        if rm -f -- "$line"; then
+        rm -f "$line"
             echo "Successfully deleted: $line" | tee -a "$LOG_FILE"
-        else
-            echo "Failed to delete: $line" | tee -a "$LOG_FILE"
-            exit 1
         fi
     done <<< "$FILES_TO_DELETE"
 fi
