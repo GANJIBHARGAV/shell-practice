@@ -9,9 +9,10 @@ do
 USAGE=$(echo $line | awk '{print$6F}' | cut -d "%" -f1)
 PARTITION=$(echo $line | awk '{print$7F}')
 if [ "$USAGE" -ge "$DISK_THRESOLD" ]
+then
 MSG+="High disk usage on $PARTITION : $USAGE % <br>"
-done <<< "$DISK_USAGE"
 fi
+done <<< "$DISK_USAGE"
 
 #echo -e "$MSG"
 
