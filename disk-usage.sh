@@ -11,6 +11,7 @@ PARTITION=$(echo $line | awk '{print$7F}')
 if [ $USAGE -ge $DISK_THRESOLD ]
 MSG+="High disk usage on $PARTITION : $USAGE % <br>"
 done <<< $DISK_USAGE
+fi
 
 #echo -e "$MSG"
 
